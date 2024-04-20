@@ -1,15 +1,13 @@
 Config = {}
 
-Config.Core = 'qb-core'           -- Name of the core file --default qb-core or qbx-core
 Config.OpenMenu = 'I'             -- https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
 Config.StressChance = 0.1         -- Default: 10% -- Percentage Stress Chance When Shooting (0-1)
-Config.UseMPH = true              -- If true speed math will be done as MPH, if false KPH will be used (YOU HAVE TO CHANGE CONTENT IN STYLES.CSS TO DISPLAY THE CORRECT TEXT)
+Config.UseMPH = false              -- If true speed math will be done as MPH, if false KPH will be used (YOU HAVE TO CHANGE CONTENT IN STYLES.CSS TO DISPLAY THE CORRECT TEXT)
 Config.MinimumStress = 50         -- Minimum Stress Level For Screen Shaking
 Config.MinimumSpeedUnbuckled = 50 -- Going Over This Speed Will Cause Stress
 Config.MinimumSpeed = 100         -- Going Over This Speed Will Cause Stress
 Config.DisablePoliceStress = true -- If true will disable stress for people with the police job
 Config.Buffs = 'ps-buffs'         -- PS-Buff integration
-Config.Fuel = 'LegacyFuel'        -- Fuel Script for getfuel and setfuel exports
 
 -- Stress
 Config.WhitelistedWeaponArmed = { -- weapons specifically whitelisted to not show armed mode
@@ -57,6 +55,28 @@ Config.WhitelistedWeaponStress = {
     `weapon_petrolcan`,
     `weapon_hazardcan`,
     `weapon_fireextinguisher`
+}
+
+Config.FuelBlacklist = { --For electric vehicles
+    'surge',
+    'iwagen',
+    'voltic',
+    'voltic2',
+    'raiden',
+    'cyclone',
+    'tezeract',
+    'neon',
+    'omnisegt',
+    'iwagen',
+    'caddy',
+    'caddy2',
+    'caddy3',
+    'airtug',
+    'rcbandito',
+    'imorgon',
+    'dilettante',
+    'khamelion',
+    'wheelchair',
 }
 
 Config.Intensity = {

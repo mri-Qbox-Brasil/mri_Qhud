@@ -1,25 +1,32 @@
-fx_version "cerulean"
-game "gta5"
+fx_version 'cerulean'
+game 'gta5'
 
-description "Z HUD"
-version "1.0.0"
-lua54 "yes"
-use_fxv2_oal "yes"
+description 'Z HUD'
+version '1.0.0'
+
+ox_lib 'locale'
 
 shared_scripts {
-	"@qb-core/shared/locale.lua",
-	"locales/en.lua",
-	"config.lua"
+	'@ox_lib/init.lua',
+	'config.lua'
 }
 
-client_script "client.lua"
-server_script "server.lua"
+client_scripts {
+	'@qbx_core/modules/playerdata.lua',
+	'client.lua',
+}
 
-ui_page "html/index.html"
+server_script 'server.lua'
+
+ui_page 'html/index.html'
 
 files {
-	"html/index.html",
-	"html/styles.css",
-	"html/responsive.css",
-	"html/app.js"
+	'locales/*.json',
+	'html/index.html',
+	'html/styles.css',
+	'html/responsive.css',
+	'html/app.js'
 }
+
+lua54 'yes'
+use_experimental_fxv2_oal 'yes'
