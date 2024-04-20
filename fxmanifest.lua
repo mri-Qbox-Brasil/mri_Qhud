@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-description 'Z HUD'
+description 'mri_Qhud from Z HUD'
 version '1.0.0'
 
 ox_lib 'locale'

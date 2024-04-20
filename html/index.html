@@ -88,26 +88,25 @@
                         transition-next="jump-up" class="bg-active-tab">
                         <q-tab-panel name="hud">
                             <div class="q-mb-md">
-                                <div class="text-h6 q-mb-md">Reset Hud</div>
+                                <div class="text-h6 q-mb-md">Resetar Hud</div>
                                 <div class="q-pa-md q-gutter-sm">
                                     <q-btn v-on:click="resetStorage($event)" :loading="progress[0].loading"
                                         :percentage="progress[0].percentage" text-color="textbutton" color="bgbutton"
-                                        @click="startComputing(0)" style="width: 150px"> Reset Settings
+                                        @click="startComputing(0)" style="width: 150px"> Resetar Configurações
                                         <template v-slot:loading> <q-spinner-gears class="on-left"></q-spinner-gears>
-                                            Resetting... </template></q-btn>
-                                    <div class="text-h7 q-mb-md">If you want to reset your settings back to default;
-                                        click this shiny button! <br> (you will have to relog for your menu to reset
-                                        changes successfully)</div>
+                                            Resetando... </template></q-btn>
+                                    <div class="text-h7 q-mb-md">Se você deseja redefinir suas configurações para o padrão;
+                                        clique neste botão brilhante! <br> (você terá que fazer login novamente para que seu menu seja redefinido com sucesso)</div>
                                     <q-btn v-on:click="restartHud($event)" :loading="progress[1].loading"
                                         :percentage="progress[1].percentage" text-color="textbutton" color="bgbutton"
-                                        @click="startComputing(1)" style="width: 150px"> Reset Hud
+                                        @click="startComputing(1)" style="width: 150px"> Resetar Hud
                                         <template v-slot:loading> <q-spinner-gears class="on-left"></q-spinner-gears>
-                                            Resetting... </template></q-btn>
-                                    <div class="text-h7 q-mb-md">If your hud is acting up, give it a good ol' reset! Or
-                                        you can do /resethud</div>
+                                            Resetando... </template></q-btn>
+                                    <div class="text-h7 q-mb-md">Se o seu hud não estiver funcionando corretamente, dê a ele um bom reset! Ou
+                                        você pode usar /resethud</div>
                                 </div>
                                 <hr>
-                                <div class="text-h6 q-mb-md">Options</div>
+                                <div class="text-h6 q-mb-md">Opções</div>
                                 <div class="text-h7">
                                     <q-item borderless tag="label" v-ripple>
                                         <q-item-section avatar>
@@ -115,9 +114,8 @@
                                                 color="checkbox" val="1"></q-checkbox>
                                         </q-item-section>
                                         <q-item-section>
-                                            <q-item-label>Show Minimap Only in Vehicle</q-item-label>
-                                            <q-item-label class="text-h7" caption>Disabling this will always keep your
-                                                minimap on your screen</q-item-label>
+                                            <q-item-label>Mostrar Minimapa Apenas no Veículo</q-item-label>
+                                            <q-item-label class="text-h7" caption>Desativar isso manterá sempre o seu minimapa na tela</q-item-label>
                                         </q-item-section>
                                     </q-item>
                                     <q-item borderless tag="label" v-ripple>
@@ -127,9 +125,8 @@
                                                 val="2"></q-checkbox>
                                         </q-item-section>
                                         <q-item-section>
-                                            <q-item-label>Show Compass Only in Vehicle</q-item-label>
-                                            <q-item-label class="text-h7" caption>Disabling this will always keep your
-                                                compass on your screen</q-item-label>
+                                            <q-item-label>Mostrar Bússola Apenas no Veículo</q-item-label>
+                                            <q-item-label class="text-h7" caption>Desativar isso manterá sempre a sua bússola na tela</q-item-label>
                                         </q-item-section>
                                     </q-item>
                                     <q-item borderless tag="label" v-ripple>
@@ -139,14 +136,14 @@
                                                 val="3"></q-checkbox>
                                         </q-item-section>
                                         <q-item-section>
-                                            <q-item-label>Show Compass Follow Cam</q-item-label>
-                                            <q-item-label class="text-h7" caption>Disabling this will make it so you can
-                                                no longer use your mouse to rotate the compass around</q-item-label>
+                                            <q-item-label>Mostrar Seguir Bússola</q-item-label>
+                                            <q-item-label class="text-h7" caption>Desativar isso fará com que você não possa mais usar o mouse para girar a bússola</q-item-label>
                                         </q-item-section>
                                     </q-item>
                                 </div>
                                 <hr>
-                                <div class="text-h6 q-mb-md">Notifications</div>
+                                <div class="text-h6 q-mb-md">Notificações</div>
+                
                                 <div class="text-h7">
                                     <q-checkbox v-on:click="openMenuSounds($event)" label='Menu Sound Effects Enabled'
                                         v-model="isOpenMenuSoundsChecked" color="checkbox" val="4"
@@ -191,45 +188,45 @@
                                     style="display: flex;"></q-checkbox>
                             </div>
                             <hr>
-                            <div class="text-h6 q-mb-md">Vehicle</div>
+                            <div class="text-h6 q-mb-md">Veículo</div>
                             <div class="text-h7">
                                 <q-toggle v-on:click="changeFPS($event)" size="lg" keep-color icon-color="toggleicons"
-                                    color="checkbox" :label="`Speedometer FPS ${isChangeFPSChecked}`"
-                                    unchecked-icon="60fps" false-value="Synced" true-value="Optimized"
+                                    color="checkbox" :label="`FPS do Velocímetro ${isChangeFPSChecked}`"
+                                    unchecked-icon="60fps" false-value="Sincronizado" true-value="Otimizado"
                                     checked-icon="30fps" v-model="isChangeFPSChecked"></q-toggle>
-                                <div class="text-h7 q-mb-md-d">Synced FPS option will result in less optimization, but
-                                    keep your speedometer in real time, however, it will also be more demanding on your
-                                    machine.</div>
-                                <q-checkbox v-on:click="HideMap($event)" label='Minimap Enabled'
+                                <div class="text-h7 q-mb-md-d">A opção de FPS sincronizado resultará em menos otimização, mas
+                                    manterá seu velocímetro em tempo real, no entanto, também será mais exigente em sua
+                                    máquina.</div>
+                                <q-checkbox v-on:click="HideMap($event)" label='Minimapa Ativado'
                                     v-model="isHideMapChecked" color="checkbox" val="15"
                                     style="display: flex;"></q-checkbox>
-                                <q-checkbox v-on:click="dynamicEngine($event)" label='Show Engine always'
+                                <q-checkbox v-on:click="dynamicEngine($event)" label='Mostrar Motor sempre'
                                     v-model="isDynamicEngineChecked" color="checkbox" val="17"
                                     style="display: flex;"></q-checkbox>
-                                <q-checkbox v-on:click="dynamicNitro($event)" label='Show Nitro always'
+                                <q-checkbox v-on:click="dynamicNitro($event)" label='Mostrar Nitro sempre'
                                     v-model="isDynamicNitroChecked" color="checkbox" val="18"
                                     style="display: flex;"></q-checkbox>
                             </div>
                             <hr>
-                            <div class="text-h6 q-mb-md">Compass</div>
+                            <div class="text-h6 q-mb-md">Bússola</div>
                             <div class="text-h7">
                                 <q-toggle v-on:click="changeCompassFPS($event)" size="lg" keep-color
                                     icon-color="toggleicons" color="checkbox"
-                                    :label="`Compass FPS ${isChangeCompassFPSChecked}`" unchecked-icon="60fps"
-                                    false-value="Synced" true-value="Optimized" checked-icon="30fps"
+                                    :label="`FPS da Bússola ${isChangeCompassFPSChecked}`" unchecked-icon="60fps"
+                                    false-value="Sincronizado" true-value="Otimizado" checked-icon="30fps"
                                     v-model="isChangeCompassFPSChecked"></q-toggle>
-                                <div class="text-h7 q-mb-md-d">Synced FPS option will result in less optimization, but
-                                    keep your compass in real time, however, it will also be more demanding on your
-                                    machine.</div>
+                                <div class="text-h7 q-mb-md-d">A opção de FPS sincronizado resultará em menos otimização, mas
+                                    manterá sua bússola em tempo real, no entanto, também será mais exigente em sua
+                                    máquina.</div>
                                 <q-item borderless tag="label" v-ripple>
                                     <q-item-section avatar>
                                         <q-checkbox v-on:click="showCompassBase($event)" v-model="isShowCompassChecked"
                                             color="checkbox" val="19"></q-checkbox>
                                     </q-item-section>
                                     <q-item-section>
-                                        <q-item-label>Compass Enabled</q-item-label>
-                                        <q-item-label class="text-h7" caption>Disabling this will make it so you can't
-                                            see the compass navigation</q-item-label>
+                                        <q-item-label>Bússola Ativada</q-item-label>
+                                        <q-item-label class="text-h7" caption>Desativar isso fará com que você não possa
+                                            ver a navegação da bússola</q-item-label>
                                     </q-item-section>
                                 </q-item>
                                 <q-item borderless tag="label" v-ripple>
@@ -238,9 +235,9 @@
                                             color="checkbox" val="20"></q-checkbox>
                                     </q-item-section>
                                     <q-item-section>
-                                        <q-item-label>Show Street Names Enabled</q-item-label>
-                                        <q-item-label class="text-h7" caption>Disabling this will make it so you can't
-                                            see street names / locations</q-item-label>
+                                        <q-item-label>Mostrar Nomes das Ruas Ativado</q-item-label>
+                                        <q-item-label class="text-h7" caption>Desativar isso fará com que você não possa
+                                            ver os nomes / locais das ruas</q-item-label>
                                     </q-item-section>
                                 </q-item>
                                 <q-item borderless tag="label" v-ripple>
@@ -249,10 +246,9 @@
                                             color="checkbox" val="21"></q-checkbox>
                                     </q-item-section>
                                     <q-item-section>
-                                        <q-item-label>Show Compass Pointer Enabled</q-item-label>
-                                        <q-item-label class="text-h7" caption>Disabling this will make it so you can't
-                                            see your pointer index to pinpoint your exact cardinal
-                                            directions</q-item-label>
+                                        <q-item-label>Mostrar Ponteiro da Bússola Ativado</q-item-label>
+                                        <q-item-label class="text-h7" caption>Desativar isso fará com que você não possa
+                                            ver o índice do ponteiro para identificar suas direções cardeais exatas</q-item-label>
                                     </q-item-section>
                                 </q-item>
                                 <q-item borderless tag="label" v-ripple>
@@ -261,14 +257,14 @@
                                             color="checkbox" val="22"></q-checkbox>
                                     </q-item-section>
                                     <q-item-section>
-                                        <q-item-label>Show Compass Degrees Enabled</q-item-label>
-                                        <q-item-label class="text-h7" caption>Disabling this will make it so you can't
-                                            see your exact degrees</q-item-label>
+                                        <q-item-label>Mostrar Graus da Bússola Ativado</q-item-label>
+                                        <q-item-label class="text-h7" caption>Desativar isso fará com que você não possa
+                                            ver seus graus exatos</q-item-label>
                                     </q-item-section>
                                 </q-item>
                             </div>
                             <hr>
-                            <div class="text-h6 q-mb-md">Cinematic Mode</div>
+                            <div class="text-h6 q-mb-md">Modo Cinemático</div>
                             <div class="text-h7">
                                 <q-checkbox v-on:click="cinematicMode($event)" label='Enabled'
                                     v-model="isCineamticModeChecked" color="checkbox" val="23"

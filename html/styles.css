@@ -53,11 +53,11 @@ div#openmenu {
 
 /* Menu buttons & checkboxes & toggle switch icons styles */
 .text-textbutton {
-  color: rgb(20, 130, 220) !important;
+  color: rgb(47, 158, 68) !important;
 }
 
 .bg-bgbutton {
-  background: rgba(20, 130, 220, 0.5) !important;
+  background: rgba(47, 158, 68, 0.5) !important;
 }
 
 .q-checkbox__inner {
@@ -65,11 +65,11 @@ div#openmenu {
 }
 
 .text-checkbox {
-  color: rgba(20, 130, 220, 0.5) !important;
+  color: rgba(47, 158, 68, 0.5) !important;
 }
 
 .q-checkbox__svg {
-  color: rgb(20, 130, 220) !important;
+  color: rgb(47, 158, 68) !important;
 }
 
 .q-checkbox__inner--truthy .q-checkbox__bg {
@@ -78,7 +78,7 @@ div#openmenu {
 
 /* if you want the checkboxes to have a glow/shadow */
 .text-toggleicons {
-  color: rgb(20, 130, 220) !important;
+  color: rgb(47, 158, 68) !important;
 }
 
 /* Menu misc */
