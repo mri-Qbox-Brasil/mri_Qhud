@@ -26,7 +26,9 @@ files {
 	'html/index.html',
 	'html/styles.css',
 	'html/responsive.css',
-	'html/app.js'
+	'html/app.js',
+	'img/logo.png'
+
 }
 
 lua54 'yes'

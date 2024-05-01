@@ -23,6 +23,11 @@
 
 <body>
     <div id="baseplate-container" v-show="show">
+        <div id="container">
+            <header>
+                <img src="../img/logo.png" alt="header">
+            </header>
+        </div>
         <div v-if="showStreets" class="street-container">
             <div class="street2">{{street2}}</div>
             <div class="street1">{{street1}}</div>
@@ -436,7 +441,7 @@
                             :max="100"></q-circular-progress>
                         <q-circular-progress rounded class="q-ml-xl" style="left: -50%;" show-value :value="nos"
                             size="2.6041666666666665vw" :thickness="0.15" color="nos" :min="0" :max="100">
-                            <q-icon name="fas fa-meteor" size="1.015625vw"
+                            <q-icon name="fa-solid fa-rocket" size="1.015625vw"
                                 :style="[enhancements['nos'] ? {color: enhancements['nos']}: {color: nosColor}]" />
                     </div>
                 </transition>

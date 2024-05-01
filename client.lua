@@ -905,20 +905,20 @@ end)
 
 -- Stress Gain
 
-CreateThread(function() -- Speeding
-    while true do
-        if LocalPlayer.state.isLoggedIn then
-            if IsPedInAnyVehicle(cache.ped, false) then
-                local speed = GetEntitySpeed(GetVehiclePedIsIn(cache.ped, false)) * speedMultiplier
-                local stressSpeed = seatbeltOn and config.MinimumSpeed or config.MinimumSpeedUnbuckled
-                if speed >= stressSpeed then
-                    TriggerServerEvent('hud:server:GainStress', math.random(1, 2))
-                end
-            end
-        end
-        Wait(10000)
-    end
-end)
+-- CreateThread(function() -- Speeding
+--     while true do
+--         if LocalPlayer.state.isLoggedIn then
+--             if IsPedInAnyVehicle(cache.ped, false) then
+--                 local speed = GetEntitySpeed(GetVehiclePedIsIn(cache.ped, false)) * speedMultiplier
+--                 local stressSpeed = seatbeltOn and config.MinimumSpeed or config.MinimumSpeedUnbuckled
+--                 if speed >= stressSpeed then
+--                     TriggerServerEvent('hud:server:GainStress', math.random(1, 2))
+--                 end
+--             end
+--         end
+--         Wait(10000)
+--     end
+-- end)
 
 local function IsWhitelistedWeaponStress(weapon)
     if weapon then
@@ -931,23 +931,23 @@ local function IsWhitelistedWeaponStress(weapon)
     return false
 end
 
-CreateThread(function() -- Shooting
-    while true do
-        if LocalPlayer.state.isLoggedIn then
-            local weapon = GetSelectedPedWeapon(cache.ped)
-            if weapon ~= joaat('WEAPON_UNARMED') then
-                if IsPedShooting(cache.ped) and not IsWhitelistedWeaponStress(weapon) then
-                    if math.random() < config.StressChance then
-                        TriggerServerEvent('hud:server:GainStress', math.random(1, 2))
-                    end
-                end
-            else
-                Wait(1000)
-            end
-        end
-        Wait(8)
-    end
-end)
+-- CreateThread(function() -- Shooting
+--     while true do
+--         if LocalPlayer.state.isLoggedIn then
+--             local weapon = GetSelectedPedWeapon(cache.ped)
+--             if weapon ~= joaat('WEAPON_UNARMED') then
+--                 if IsPedShooting(cache.ped) and not IsWhitelistedWeaponStress(weapon) then
+--                     if math.random() < config.StressChance then
+--                         TriggerServerEvent('hud:server:GainStress', math.random(1, 2))
+--                     end
+--                 end
+--             else
+--                 Wait(1000)
+--             end
+--         end
+--         Wait(8)
+--     end
+-- end)
 
 -- Stress Screen Effects
 

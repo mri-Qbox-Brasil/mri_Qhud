@@ -402,3 +402,76 @@ altitude {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 1.563vw 3.125vw -0.625vw inset, rgba(0, 0, 0, 0.3) 0px 10.417vw 1.875vw -10.417vw inset;
   border-radius: 0.260vw;
 }
+
+/* Versão logo na direita*/
+#container {
+	position: absolute;
+	top: 2vh;
+	bottom: 100%;
+	right: 1vh;
+}
+
+/* Versão logo no centro*/
+/* #container {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+header {
+
+}
+
+header img {
+
+}
+
+/* Firefox old*/
+@-moz-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+
+@-webkit-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+/* IE */
+@-ms-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+/* Opera and prob css3 final iteration */
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
