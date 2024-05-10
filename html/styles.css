@@ -404,20 +404,20 @@ altitude {
 }
 
 /* Versão logo na direita*/
-#container {
+/* #container {
 	position: absolute;
 	top: 2vh;
 	bottom: 100%;
 	right: 1vh;
-}
+} */
 
 /* Versão logo no centro*/
-/* #container {
+#container {
   position: absolute;
   top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
-} */
+}
 
 header {
 
