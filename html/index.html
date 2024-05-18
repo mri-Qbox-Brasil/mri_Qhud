@@ -23,11 +23,14 @@
 
 <body>
     <div id="baseplate-container" v-show="show">
-        <div id="container">
+        <!-- <div id="container">
             <header>
                 <img src="../img/logo.png" alt="header">
             </header>
-        </div>
+        </div> -->
+        <div style="display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; margin: 0; padding: 20px;">
+            <img src="../img/logo.png" alt="Logo" style="max-width: 100px;">
+          </div>
         <div v-if="showStreets" class="street-container">
             <div class="street2">{{street2}}</div>
             <div class="street1">{{street1}}</div>

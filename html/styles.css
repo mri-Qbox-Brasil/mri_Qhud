@@ -414,17 +414,13 @@ altitude {
 /* Versão logo no centro*/
 #container {
   position: absolute;
-  top: 5%;
+  top: 6%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-header {
-
-}
-
 header img {
-
+  max-width: 136px;
 }
 
 /* Firefox old*/
