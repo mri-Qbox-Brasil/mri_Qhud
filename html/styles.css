@@ -413,7 +413,6 @@ altitude {
 
 /* Versão logo no centro*/
 #container {
-  position: absolute;
   top: 6%;
   left: 50%;
   transform: translate(-50%, -50%);
