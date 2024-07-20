@@ -23,6 +23,7 @@ RegisterNetEvent('hud:server:GainStress', function(amount)
     local src = source
     local Player = exports.qbx_core:GetPlayer(src)
     local newStress
+    if Config.DisableStress then return end
     if not Player or (Config.DisablePoliceStress and Player.PlayerData.job.type == 'leo') then return end
     if not ResetStress then
         if not Player.PlayerData.metadata.stress then
