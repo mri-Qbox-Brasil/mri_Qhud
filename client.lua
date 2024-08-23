@@ -450,6 +450,8 @@ RegisterNetEvent('hud:client:ToggleAirHud', function()
 end)
 
 RegisterNetEvent('hud:client:UpdateNeeds', function(newHunger, newThirst) -- Triggered in qb-core
+    if not newHunger then newHunger = 0 end
+    if not newThirst then newThirst = 0 end
     if newHunger > 100 then
         hunger = 100
     else
