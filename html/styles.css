@@ -218,7 +218,7 @@ div#q-loading-bar {
 }
 
 .q-ml-xl {
-  margin-left: -1.2176470588235294vw !important;
+  margin-left: -1.15vw !important;
   /* Change this to space radials */
 }
 
@@ -248,7 +248,7 @@ div#q-loading-bar {
 
 #engine {
   position: relative;
-  left: 10.5vh !important;
+  left: 7.5vh !important;
   bottom: 6.6vh !important;
 }
 
@@ -404,16 +404,17 @@ altitude {
 }
 
 /* Versão logo na direita*/
-/* #container {
-	position: absolute;
-	top: 2vh;
-	bottom: 100%;
-	right: 1vh;
+/* #logo {
+  position: absolute;
+  top: 8%;
+  right: 0%;
+  transform: translate(-50%, -50%);
 } */
 
 /* Versão logo no centro*/
-#container {
-  top: 6%;
+#logo {
+  position: absolute;
+  top: 8%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

@@ -23,14 +23,6 @@
 
 <body>
     <div id="baseplate-container" v-show="show">
-        <!-- <div id="container">
-            <header>
-                <img src="../img/logo.png" alt="header">
-            </header>
-        </div> -->
-        <div style="display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; margin: 0; padding: 20px;">
-            <img src="../img/logo.png" alt="Logo" style="max-width: 100px;">
-        </div>
         <div v-if="showStreets" class="street-container">
             <div class="street2">{{street2}}</div>
             <div class="street1">{{street1}}</div>
@@ -303,6 +295,9 @@
             </div>
         </div>
         <div id="ui-container">
+            <div id ="logo" v-show="show" style="display: flex;">
+                <img src="../img/logo.png" alt="Logo" style="max-width: 100px;">
+            </div>
             <div id="playerHud" v-show="show">
                 <transition name="fade">
                     <div v-if="showVoice">
@@ -496,7 +491,7 @@
                         :min="0" :max="750">
                         <altitude>{{(altitude)}}</altitude>
                 </div>
-                <transition name="fade">
+                <!-- <transition name="fade">
                     <div class="responsive" id="seatbelt" v-if="showSeatbelt">
                         <q-circular-progress rounded class="q-ml-xl" style="opacity: 40%;" size="1.875vw"
                             :thickness="0.21" color="gauge" :min="0" :max="100"></q-circular-progress>
@@ -506,7 +501,7 @@
                             <q-icon name="fas fa-user-slash" :value="seatbelt" size="0.7291666666666666vw"
                                 :style="{color: seatbeltIconColor}" />
                     </div>
-                </transition>
+                </transition> -->
                 <transition name="fade">
                     <div class="responsive" id="engine" v-if="showEngine">
                         <q-circular-progress rounded class="q-ml-xl" style="opacity: 40%;" :value="100" size="1.875vw"
